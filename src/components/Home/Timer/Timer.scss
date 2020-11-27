@@ -1,0 +1,53 @@
+.timer {
+   display: grid;
+   grid-template-columns: repeat(4, max-content);
+   column-gap: 1.8rem;
+   row-gap: 0.4rem;
+   padding-bottom: 1rem;
+   
+   &__digits {
+      display: grid;
+      grid-auto-flow: column;
+      column-gap: 0.6rem;
+   }
+
+   &__types {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--color-white);
+   }
+}
+
+.timer-digit {
+   font-size: 4rem;
+   width: 4rem;
+   height: 6rem;
+   color: var(--color-gold);
+   background-color: var(--color-white);
+   border-radius: 2px;
+   display: grid;
+   align-items: center;
+   justify-items: center;
+   position: relative;   
+   font-family: 'Libre Baskerville', serif;
+
+   @media only screen and (max-width: 600px) {
+      font-size: 3.2rem;
+      width: 3.2rem;
+      height: 5rem;
+   }
+}
+
+.timer__digits:not(:nth-child(4)) 
+.timer-digit:last-child:after {
+   font-family: 'Libre Baskerville', serif;
+   content: ":";
+   font-size: 6rem;
+   height: min-content;
+   line-height: 1;
+   color: var(--color-white);
+   z-index: 10;
+   transform: translate(104%, -10%);
+   position: absolute;
+   right: 0;
+}

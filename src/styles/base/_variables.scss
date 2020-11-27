@@ -1,0 +1,20 @@
+:root {
+   // FONTS
+   --font-primary: 'Raleway', sans-serif;
+   --font-display: 'Dancing Script', cursive;
+
+   // COLORS
+   --color-white: #fff;
+   --color-black: #323232;
+   --color-primary: #596e79;
+   --color-grey: #acacac;
+   --color-grey-light: #d1d1d1;
+   --color-gold: #d4af37;
+   --color-error: #ce3e3e;
+   --color-success: #72c542;
+
+   // SHADOWS
+   --box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
+   --box-shadow-subtle: 1px 2px 3px rgba(0, 0, 0, 0.15);
+   --box-shadow-hover: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

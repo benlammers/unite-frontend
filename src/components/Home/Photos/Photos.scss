@@ -1,0 +1,48 @@
+.photos {
+   padding: 2rem;
+
+   display: grid;
+   grid-template-columns: repeat(16, 1fr);
+   grid-template-rows: 40vw 40vw;
+
+   row-gap: 1rem;
+   column-gap: 1rem;
+
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100);
+      transition: all 0.3s;
+
+      &:hover {
+         z-index: 1;
+         filter: none;
+      }
+   }
+}
+
+#photo-aoyc {
+   grid-column: 1 / 6;
+   transform-origin: 0 0;
+}
+
+#photo-wonderland {
+   grid-column: 6 / 11;
+   transform-origin: 50% 0;
+}
+
+#photo-icecream {
+   grid-column: 11 / 17;
+   transform-origin: 100% 0;
+}
+
+#photo-wellington {
+   grid-column: 1 / 12;
+   transform-origin: 0 100%;
+}
+
+#photo-coveralls {
+   grid-column: 12 / 17;
+   transform-origin: 100% 100%;
+}

@@ -1,0 +1,161 @@
+.form {
+   animation: fadeInAndZoom 0.3s forwards;
+
+   height: 40rem;
+   margin-bottom: 4rem;
+   width: 40rem;
+   display: grid;
+
+   row-gap: 2rem;
+
+   grid-template-columns: min-content 1fr min-content;
+   grid-template-rows: 1fr max-content;
+
+   @media only screen and (max-width: 600px) {
+      width: calc(90vw - 3rem);
+   }
+
+   &__prev,
+   &__next,
+   &__submit,
+   &__number {
+      color: var(--color-white);
+      grid-row: 2 / 3;
+   }
+
+   &__prev {
+      grid-column: 1 / 2;
+   }
+
+   &__next,
+   &__submit {
+      grid-column: 3 / 4;
+   }
+
+   &__number {
+      grid-column: 1 / -1;
+      justify-self: center;
+      align-self: center;
+   }
+}
+
+.guest-form {
+   animation: fadeIn 0.2s forwards;
+
+   grid-column: 1 / -1;
+   display: grid;
+   align-content: start;
+   row-gap: 1.6rem;
+
+   &__name {
+      text-align: center;
+      margin-bottom: 1rem;
+   }
+
+   & input[type='radio'],
+   & input[type='checkbox'] {
+      display: none;
+   }
+
+   & label {
+      cursor: pointer;
+      width: max-content;
+   }
+
+   & svg {
+      margin-right: 0.6rem;
+   }
+}
+
+.attending {
+   display: grid;
+   grid-auto-flow: column;
+   align-items: center;
+}
+
+.dietary-restrictions {
+   animation: fadeIn 0.2s forwards;
+
+   display: grid;
+   row-gap: 0.2rem;
+
+   &__options {
+      padding: 0.6rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 0.4rem;
+   }
+}
+
+.dietary-notes {
+   animation: fadeIn 0.2s forwards;
+
+   padding: 0.4rem 1rem;
+   resize: none;
+}
+
+.song-request {
+   animation: fadeIn 0.2s forwards;
+
+   display: grid;
+   row-gap: 0.6rem;
+}
+
+.song-search {
+   animation: fadeIn 0.2s forwards;
+
+   &__input {
+      padding: 0.4rem 1rem;
+      width: 100%;
+      margin-top: 0.6rem;
+   }
+
+   &__list {
+      display: grid;
+      position: absolute;
+      width: 40rem;
+      padding: 0 1px;
+      margin-bottom: 2rem;
+
+      @media only screen and (max-width: 600px) {
+         width: calc(90vw - 3rem);
+      }
+   }
+}
+
+.song {
+   display: grid;
+   background-color: var(--color-white);
+   grid-template-columns: max-content 1fr;
+   grid-template-rows: max-content max-content;
+
+   color: var(--color-black);
+   padding: 0.4rem;
+   column-gap: 2rem;
+   row-gap: 0.6rem;
+
+   &--option {
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+         background-color: var(--color-grey-light);
+      }
+   }
+
+   img {
+      width: 6rem;
+      height: 6rem;
+      object-fit: contain;
+
+      grid-row: 1 / -1;
+   }
+
+   &__title {
+      align-self: end;
+   }
+
+   &__artist {
+      align-self: start;
+   }
+}

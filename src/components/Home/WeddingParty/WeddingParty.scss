@@ -1,0 +1,153 @@
+.wedding-party {
+   display: grid;
+   justify-items: center;
+   row-gap: 2.6rem;
+   padding: 8rem 0 6rem;
+   grid-template-rows: repeat(3, max-content);
+
+   &__heading {
+      font-size: 3.2rem;
+      font-family: var(--font-display);
+      
+      @media only screen and (max-width: 850px) {
+         grid-row: 1 / 2;
+         font-size: 3.2rem;
+      }
+   }
+
+   &__couple, &__group, &__mobile {
+      display: grid;
+      justify-content: center;
+      row-gap: 3rem;
+      column-gap: 3rem;
+      padding-bottom: 2rem;
+   }
+
+   &__couple {
+      grid-template-columns: repeat(2, max-content);
+   }
+   
+   &__group {
+      grid-template-columns: repeat(5, max-content);
+   }
+
+   &__mobile {
+      display: none;
+      grid-template-columns: repeat(4, max-content);
+   }
+   
+   @media only screen and (max-width: 850px) {
+      &__couple, &__group {
+         display: none;
+      }
+      
+      &__mobile {
+         display: grid;
+         row-gap: 3rem;
+         column-gap: 2rem;
+      }
+   }
+   
+   @media only screen and (max-width: 600px) {
+      &__mobile {
+         grid-template-columns: repeat(2, max-content);
+         column-gap: 4rem;
+      }
+   }
+
+   @media only screen and (max-width: 400px) {
+      padding: 3rem 0;
+
+      &__mobile {
+         grid-template-columns: repeat(2, max-content);
+         column-gap: 2rem;
+         row-gap: 2rem;
+      }
+   }
+}
+
+.wedding-party-item {
+   display: grid;
+   row-gap: 0.6rem;
+   width: 16vw;
+   
+   & img {
+      height: 16vw;
+      width: 16vw;
+      object-fit: cover;
+      margin-bottom: 0.6rem;
+      border-radius: 2px;
+      grid-column: 1 / -1;
+   }
+
+   & span {
+      overflow-wrap: normal;
+   }
+   
+   &__name {
+      font-size: 1.4rem;
+      font-weight: bold;
+   }
+   
+   &__desc {
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      
+      & span {
+         padding: 0 0.6rem;
+      }
+
+      &--mobile {
+         text-transform: none;
+         display: none;
+      }
+   }
+
+   @media only screen and (max-width: 1000px) {
+      &__name {
+         font-size: 1.2rem;
+      }
+   }
+
+   @media only screen and (max-width: 850px) {
+      width: 22vw;
+      
+      & img {
+         height: 22vw;
+         width: 22vw;
+      }
+   }
+
+   @media only screen and (max-width: 600px) {
+      width: 35vw;
+
+      & img {
+         height: 35vw;
+         width: 35vw;
+      }
+
+      &__name {
+         font-size: 1.6rem;
+      }
+      
+      &__desc {
+         font-size: 1.4rem;
+      }
+   }
+
+   @media only screen and (max-width: 500px) {
+      &__name {
+         font-size: 1.3rem;
+      }
+
+      &__desc {
+         display: none;
+         
+         &--mobile {
+            display: grid;
+            font-size: 1.2rem;
+         }
+      }
+   
+   }
+}

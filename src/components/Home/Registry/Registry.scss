@@ -1,0 +1,24 @@
+.registry {
+   background-color: var(--color-primary);
+   color: var(--color-white);
+   padding: 14rem 28vw;
+   
+   display: grid;
+   justify-items: center;
+   row-gap: 1rem;
+   text-align: center;
+   line-height: 1.4;
+   
+   & button {
+      margin-top: 1.6rem;
+      width: 12rem;
+   }
+   
+   @media only screen and (max-width: 1200px) {
+      padding: 14rem 10vw;
+   }
+   
+   @media only screen and (max-width: 850px) {
+      padding: 8rem 10vw;
+   }
+}

@@ -1,0 +1,42 @@
+.button {
+   padding: 0.4rem 1.8rem;
+   background-color: transparent;
+   text-decoration: none;
+   cursor: pointer;
+   border-radius: 2px;
+   width: max-content;
+   min-width: 8rem;
+   
+   &--white {
+      border: 2px solid var(--color-white);
+      font-weight: bold;
+
+      &,
+      &:active,
+      &:focus {
+         color: var(--color-white);
+      }
+   }
+
+   &--blue {
+      border: 2px solid var(--color-primary);
+      background-color: var(--color-primary);
+      font-weight: bold;
+
+      &,
+      &:active,
+      &:focus {
+         color: var(--color-white);
+      }
+   }
+
+   &--black {
+      border: 2px solid var(--color-black);
+
+      &,
+      &:active,
+      &:focus {
+         color: var(--color-black);
+      }
+   }
+}

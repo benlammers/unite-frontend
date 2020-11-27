@@ -1,0 +1,27 @@
+.rsvp {
+   height: 100%;
+   width: 100%;
+   color: var(--color-white);
+
+   display: grid;
+   justify-content: center;
+   align-content: center;
+
+   row-gap: 2rem;
+
+   // Background Fixed to Deal with Song Dropdown
+   &:before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      background-color: var(--color-primary);
+      position: fixed;
+      z-index: -1;
+   }
+
+   &__back {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+   }
+}

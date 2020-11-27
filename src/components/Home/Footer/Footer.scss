@@ -1,0 +1,10 @@
+.footer {
+   background-color: var(--color-primary);
+   padding: 2rem;
+
+   display: grid;
+   grid-template-columns: 1fr max-content;
+   align-items: center;
+
+   color: var(--color-white);
+}

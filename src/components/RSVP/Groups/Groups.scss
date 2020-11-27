@@ -1,0 +1,31 @@
+.groups {
+   display: grid;
+   justify-content: center;
+   align-content: center;
+   row-gap: 2rem;
+
+   list-style: none;
+}
+
+.group {
+   animation: fadeInAndZoom 0.3s forwards;
+
+   background-color: var(--color-white);
+   color: var(--color-black);
+   box-shadow: var(--box-shadow);
+
+   display: grid;
+   text-align: center;
+   justify-items: center;
+
+   row-gap: 1.6rem;
+   padding: 3rem;
+
+   &__guests {
+      list-style: none;
+   }
+
+   &__button {
+      color: var(--color-black);
+   }
+}
