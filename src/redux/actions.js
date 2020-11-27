@@ -161,6 +161,7 @@ export function searchSpotify(query) {
                dispatch({ type: SET_SONGS, songs })
             })
             .catch(err => {
+               // TODO: DISPLAY AN ERROR IF CANT SEARCH SPOTIFY
                console.log('Error Search Spotify: ', err)
             })
       }
