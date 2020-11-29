@@ -37,12 +37,17 @@ const Details = () => {
             <div className='details__block'>
                <h2 className='heading-primary'>Accomodations</h2>
                <span className='text-secondary'>
-                  Looking for somewhere to sleep after the reception is over, here is a list of nearby hotels to
-                  consider
-                  <a href="https://www.wyndhamhotels.com/ramada/trenton-ontario/ramada-trenton-hotel/rooms-rates" target="_blank" rel="noopener noreferrer">
+                  Looking for somewhere to sleep after the reception is over, here some nearby nearby hotels to consider
+                  <a
+                     href='https://www.wyndhamhotels.com/ramada/trenton-ontario/ramada-trenton-hotel/rooms-rates'
+                     target='_blank'
+                     rel='noopener noreferrer'>
                      Ramada by Wyndham - Trenton
                   </a>
-                  <a href="https://www.choicehotels.com/en-ca/ontario/trenton/comfort-inn-hotels/cn313?mc=llyxcncnnbl&pmf=canada" target="_blank" rel="noopener noreferrer">
+                  <a
+                     href='https://www.choicehotels.com/en-ca/ontario/trenton/comfort-inn-hotels/cn313?mc=llyxcncnnbl&pmf=canada'
+                     target='_blank'
+                     rel='noopener noreferrer'>
                      Comfort Inn - Trenton
                   </a>
                </span>
@@ -50,7 +55,13 @@ const Details = () => {
             <div className='details__block'>
                <h2 className='heading-primary'>Travel</h2>
                <span className='text-secondary'>
-                  We hope no one will have to hold back while celebrating with us late into the night so please remember to organize a ride home
+                  We hope no one will have to hold back while celebrating with us late into the night so please remember
+                  to organize a ride home
+                  <br />
+                  <br />
+                  Driven Taxi - (613) 394-1462
+                  <br />
+                  ABC Taxi - (613) 392-3525
                   <br />
                   <br />
                   Uber does <strong>not</strong> service this location

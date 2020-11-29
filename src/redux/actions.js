@@ -1,6 +1,7 @@
 import axiosRequest from 'util/axiosRequest'
 import axiosSpotify from 'util/axiosSpotify'
 import Cookies from 'js-cookie'
+import store from './store'
 
 import {
    CLEAR_GROUPS,
@@ -17,6 +18,11 @@ import {
    CLEAR_SONGS,
    UPDATE_SONG,
    CLEAR_RSVP,
+   CLEAR_ALERT_TIMER,
+   HIDE_ALERT,
+   SET_ALERT,
+   SHOW_RSVP_SUCCESS,
+   HIDE_RSVP_SUCCESS,
 } from './types'
 
 export function setSpotifyToken() {
@@ -26,7 +32,7 @@ export function setSpotifyToken() {
          Cookies.set('Spotify-Token', res.data.token)
       })
       .catch(err => {
-         console.log('Error Getting Spotify Token: ', err)
+         console.error('Spotify Token Error: ', err)
       })
 }
 
@@ -64,11 +70,11 @@ export function searchGroups(name) {
                let groups = formatGroups(res)
                let groupFound = groups.length > 0
                dispatch({ type: SET_GROUPS, groups: groupFound ? groups : null })
-               resolve(groupFound)
+               resolve(groupFound ? 'found' : 'none')
             })
             .catch(err => {
-               console.log('Search Error: ', err)
-               resolve(false)
+               console.error('Search Guests Error: ', err)
+               resolve('error')
             })
       })
    }
@@ -95,7 +101,7 @@ export function submitGroup(group) {
             resolve(true)
          })
          .catch(err => {
-            console.log(err)
+            console.error('Send RSVP Error: ', err)
             resolve(false)
          })
    })
@@ -161,8 +167,8 @@ export function searchSpotify(query) {
                dispatch({ type: SET_SONGS, songs })
             })
             .catch(err => {
-               // TODO: DISPLAY AN ERROR IF CANT SEARCH SPOTIFY
-               console.log('Error Search Spotify: ', err)
+               sendAlert('Cannot Access Spotify', 'error')
+               console.error('Error Search Spotify: ', err)
             })
       }
    }
@@ -174,4 +180,38 @@ export function clearSongs() {
 
 export function clearRsvp() {
    return { type: CLEAR_RSVP }
+}
+
+export function showSuccessModal() {
+   return { type: SHOW_RSVP_SUCCESS }
+}
+
+export function hideSuccessModal() {
+   return { type: HIDE_RSVP_SUCCESS }
+}
+
+export const sendAlert = (text, type = '') => {
+   store.dispatch((dispatch, getState) => {
+      let timer = getState().alert.timer
+      if (timer) {
+         dispatch({
+            type: CLEAR_ALERT_TIMER,
+         })
+      }
+      let newTimer = setTimeout(() => {
+         dispatch({
+            type: HIDE_ALERT,
+         })
+      }, 4000)
+
+      dispatch({
+         type: SET_ALERT,
+         alert: {
+            text: text,
+            type: type,
+            timer: newTimer,
+            visible: true,
+         },
+      })
+   })
 }

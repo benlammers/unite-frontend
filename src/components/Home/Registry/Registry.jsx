@@ -10,7 +10,13 @@ const Registry = () => {
             Please know that your presence at our wedding is present enough! However, for friends and family who have
             been asking for gift ideas, here is a link to our online registry
          </span>
-         <button className='button button--white text-primary'>View</button>
+         <a
+            className='button button--white text-primary'
+            href='https://www.myregistry.com/wedding-registry/benjamin-lammers-and-madison-scheerhoorn-belleville-on/2570431/giftlist'
+            rel='noopener noreferrer'
+            target='_blank'>
+            View
+         </a>
       </div>
    )
 }

@@ -15,4 +15,10 @@ export const UPDATE_SONG = 'UPDATE_SONG'
 export const SET_SONGS = 'SET_SONGS'
 export const CLEAR_SONGS = 'CLEAR_SONGS'
 
+export const SHOW_RSVP_SUCCESS = 'SHOW_RSVP_SUCCESS'
+export const HIDE_RSVP_SUCCESS = 'HIDE_RSVP_SUCCESS'
 export const CLEAR_RSVP = 'CLEAR_RSVP'
+
+export const SET_ALERT = 'SET_ALERT'
+export const CLEAR_ALERT_TIMER = 'CLEAR_ALERT_TIMER'
+export const HIDE_ALERT = 'HIDE_ALERT'

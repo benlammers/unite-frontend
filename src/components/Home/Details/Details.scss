@@ -33,7 +33,7 @@
       text-align: center;
       display: grid;
       justify-items: center;
-      padding: 0 2rem;
+      padding: 0 10vw;
       row-gap: 0.6rem;
 
       & a {
@@ -45,6 +45,10 @@
       & a:last-child {
          margin-top: 1rem;
       }
+
+      @media only screen and (max-width: 900px) {
+         padding: 0 3rem;
+      }
    }
 
    &__button {
@@ -52,7 +56,7 @@
    }
 
    &__photo {
-      height: 48vw;
+      height: 46vw;
       width: 40vw;
       object-fit: cover;
       object-position: center;
@@ -63,6 +67,10 @@
       &:hover {
          transform: scale(1);
          filter: none;
+      }
+
+      @media only screen and (max-width: 900px) {
+         height: 56vw;
       }
 
       @media only screen and (max-width: 700px) {

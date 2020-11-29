@@ -30,9 +30,14 @@
       min-width: 10rem;
       font-size: 1.8rem;
 
-      &:last-child {
+      &:last-child:not(.pop-up-single-button) {
          justify-self: end;
       }
+   }
+
+   &-single-button {
+      grid-column: 1 / -1;
+      justify-self: center;
    }
 }
 

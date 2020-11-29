@@ -14,6 +14,11 @@ import {
    SET_SONGS,
    CLEAR_SONGS,
    CLEAR_RSVP,
+   HIDE_RSVP_SUCCESS,
+   SHOW_RSVP_SUCCESS,
+   SET_ALERT,
+   CLEAR_ALERT_TIMER,
+   HIDE_ALERT,
 } from './types'
 
 const initialState = {
@@ -21,6 +26,13 @@ const initialState = {
    group: null,
    guestIndex: 0,
    songs: null,
+   showRSVPSuccess: false,
+   alert: {
+      text: '',
+      type: '',
+      visible: false,
+      timer: null,
+   },
 }
 
 export default function (state = initialState, action) {
@@ -118,8 +130,45 @@ export default function (state = initialState, action) {
             songs: null,
          }
 
+      case SHOW_RSVP_SUCCESS:
+         return {
+            ...state,
+            showRSVPSuccess: true,
+         }
+
+      case HIDE_RSVP_SUCCESS:
+         return {
+            ...state,
+            showRSVPSuccess: false,
+         }
+
       case CLEAR_RSVP:
-         return initialState
+         return {
+            ...initialState,
+            showRSVPSuccess: state.showRSVPSuccess,
+         }
+
+      case SET_ALERT:
+         return {
+            ...state,
+            alert: action.alert,
+         }
+      case CLEAR_ALERT_TIMER:
+         return {
+            ...state,
+            alert: {
+               ...state.alert,
+               timer: null,
+            },
+         }
+      case HIDE_ALERT:
+         return {
+            ...state,
+            alert: {
+               ...state.alert,
+               visible: false,
+            },
+         }
 
       default:
          return state

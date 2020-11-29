@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 
 import { useInput } from 'hooks'
-import { searchGroups } from 'redux/actions'
+import { searchGroups, sendAlert } from 'redux/actions'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
@@ -18,9 +18,13 @@ const Search = () => {
    const handleSubmit = e => {
       e.preventDefault()
       setSearching(true)
-      dispatch(searchGroups(name)).then(success => {
-         if (!success) {
+      dispatch(searchGroups(name)).then(response => {
+         if (response === 'none') {
             setNameError('Could not find guest')
+            setSearching(false)
+         }
+         if (response === 'error') {
+            sendAlert('Error when searching for guest', 'error')
             setSearching(false)
          }
       })

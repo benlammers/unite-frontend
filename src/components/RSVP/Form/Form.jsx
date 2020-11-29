@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
-import { clearRsvp, nextGuest, prevGuest, submitGroup } from 'redux/actions'
+import { clearRsvp, nextGuest, prevGuest, showSuccessModal, submitGroup } from 'redux/actions'
 import { useToggle } from 'hooks'
 
 import GuestForm from './GuestForm'
@@ -36,6 +36,7 @@ const Form = () => {
       submitGroup(group).then(success => {
          if (success) {
             dispatch(clearRsvp())
+            dispatch(showSuccessModal())
             history.push('/')
          } else setSubmitting(false)
       })
