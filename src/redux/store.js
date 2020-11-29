@@ -8,7 +8,7 @@ const logger = createLogger({
    diff: true,
 })
 
-const middleware = [thunk, logger]
+const middleware = process.env.NODE_ENV === 'development' ? [thunk, logger] : [thunk]
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middleware)))
 
