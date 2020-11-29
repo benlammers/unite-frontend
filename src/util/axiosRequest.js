@@ -3,8 +3,7 @@ import axios from 'axios'
 console.log(process.env.NODE_ENV)
 
 const axiosRequest = axios.create({
-   // baseURL: process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:8000/' : process.env.REACT_APP_BACKEND_URL,
-   baseURL: 'https://uniteapi.herokuapp.com/',
+   baseURL: process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:8000/' : process.env.REACT_APP_BACKEND_URL,
    responseType: 'json',
 })
 
