@@ -52,17 +52,17 @@
       margin-bottom: 1rem;
    }
 
-   & input[type='radio'],
-   & input[type='checkbox'] {
+   input[type='radio'],
+   input[type='checkbox'] {
       display: none;
    }
 
-   & label {
+   label {
       cursor: pointer;
       width: max-content;
    }
 
-   & svg {
+   svg {
       margin-right: 0.6rem;
    }
 }

@@ -36,13 +36,13 @@
       padding: 0 10vw;
       row-gap: 0.6rem;
 
-      & a {
+      a {
          display: block;
          margin-top: 1.8rem;
          color: var(--color-font);
       }
 
-      & a:last-child {
+      a:last-child {
          margin-top: 1rem;
       }
 
