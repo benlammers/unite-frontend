@@ -1,6 +1,6 @@
 import React from 'react'
-import HoldingImage from './media/holding.jpeg'
-import LaughingImage from './media/laughing.jpeg'
+import HoldingImage from './media/holding.jpg'
+import LaughingImage from './media/laughing.jpg'
 
 import './Details.scss'
 

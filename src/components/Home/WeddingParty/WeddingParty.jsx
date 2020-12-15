@@ -1,19 +1,19 @@
 import React from 'react'
 
-import BenImage from './media/ben.webp'
-import MadisonImage from './media/madison.webp'
+import BenImage from './media/ben.jpg'
+import MadisonImage from './media/madison.jpg'
 
-import EricImage from './media/eric.webp'
-import AmberImage from './media/amber.webp'
-import JoleneImage from './media/jolene.webp'
-import JoshImage from './media/josh.webp'
-import MattImage from './media/matt.webp'
+import EricImage from './media/eric.jpg'
+import AmberImage from './media/amber.jpg'
+import JoleneImage from './media/jolene.jpg'
+import JoshImage from './media/josh.jpg'
+import MattImage from './media/matt.jpg'
 
-import MarinaImage from './media/marina.png'
-import AlanaImage from './media/alana.png'
-import AnnaImage from './media/anna.webp'
-import JuliannaImage from './media/julianna.webp'
-import BreanneImage from './media/breanne.webp'
+import MarinaImage from './media/marina.jpg'
+import AlanaImage from './media/alana.jpg'
+import AnnaImage from './media/anna.jpg'
+import JuliannaImage from './media/julianna.jpg'
+import BreanneImage from './media/breanne.jpg'
 
 import './WeddingParty.scss'
 

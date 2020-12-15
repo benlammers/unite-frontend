@@ -1,9 +1,9 @@
 import React from 'react'
-import AOYCImage from './media/aoyc.jpeg'
-import WonderlandImage from './media/wonderland.jpeg'
-import IcecreamImage from './media/icecream.jpeg'
-import WellingtonImage from './media/wellington.jpeg'
-import CoverallsImage from './media/coveralls.jpeg'
+import AOYCImage from './media/aoyc.jpg'
+import WonderlandImage from './media/wonderland.jpg'
+import IcecreamImage from './media/icecream.jpg'
+import WellingtonImage from './media/wellington.jpg'
+import CoverallsImage from './media/coveralls.jpg'
 
 import './Photos.scss'
 
