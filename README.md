@@ -1,4 +1,4 @@
-# Showdown - Tournament Frontend
+# Unite Frontend
 
 ## Description
 
