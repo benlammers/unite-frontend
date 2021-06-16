@@ -17,7 +17,7 @@ const Banner = () => {
          <div className="banner__content">
             <h1 className="banner__names">Ben &amp; Madison</h1>
             <Timer />
-            <h1 className="banner__date heading-secondary">~ 05.06.2020 ~</h1>
+            <h1 className="banner__date heading-secondary">~ 05.06.2021 ~</h1>
          </div>
 
 
