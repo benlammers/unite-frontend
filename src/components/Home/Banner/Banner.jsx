@@ -2,7 +2,7 @@ import React from 'react'
 import { Link as ScrollLink} from 'react-scroll'
 import { Link as RouterLink} from 'react-router-dom'
 
-import Timer from '../Timer/Timer'
+// import Timer from '../Timer/Timer'
 
 import './Banner.scss'
 
@@ -16,7 +16,7 @@ const Banner = () => {
 
          <div className="banner__content">
             <h1 className="banner__names">Ben &amp; Madison</h1>
-            <Timer />
+            {/* <Timer /> */}
             <h1 className="banner__date heading-secondary">~ 05.06.2020 ~</h1>
          </div>
 
