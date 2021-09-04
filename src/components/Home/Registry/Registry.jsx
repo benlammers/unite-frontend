@@ -4,7 +4,7 @@ import './Registry.scss'
 
 const Registry = () => {
    return (
-      <div className='registry'>
+      <div className='registry' id='registry'>
          <h1 className='heading-primary'>Registry</h1>
          <span className='text-primary'>
             Please know that your presence at our wedding is present enough! However, for friends and family who have
@@ -12,7 +12,7 @@ const Registry = () => {
          </span>
          <a
             className='button button--white text-primary'
-            href='https://www.myregistry.com/wedding-registry/benjamin-lammers-and-madison-scheerhoorn-belleville-on/2570431/giftlist'
+            href='#registry'
             rel='noopener noreferrer'
             target='_blank'>
             View
