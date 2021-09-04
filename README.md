@@ -23,7 +23,10 @@ The website contains multiple informative sections such as details of the locati
 ## Getting Started
 [View the hosted site](https://eager-leavitt-ce2070.netlify.app/)
 
-To run locally, clone the repository locally and navigate into the folder then install dependencies by running `npm install` then run the app by calling `npm start`
+To test RSVPs you can search any of these fictional characters: Clarke Kent, Lois Lane, Han Solo, Leia Skywalker, Ron Weasley or Hermione Granger
+
+### Run Locally
+Clone the repository locally and navigate into the folder then install dependencies by running `npm install` then run the app by calling `npm start`
 
 Must run alongside [Unite API](https://github.com/benlammers/unite-api) for RSVPs to work
 
