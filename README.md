@@ -21,7 +21,7 @@ The website contains multiple informative sections such as details of the locati
 - [Spotify Web API](https://developer.spotify.com/documentation/web-api/)
 
 ## Getting Started
-[View the hosted site](https://eager-leavitt-ce2070.netlify.app/)
+[View the hosted site](https://unite-app.netlify.app/)
 
 To test RSVPs you can search any of these fictional characters: Clarke Kent, Lois Lane, Han Solo, Leia Skywalker, Ron Weasley or Hermione Granger
 
